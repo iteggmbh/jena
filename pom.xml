@@ -91,6 +91,11 @@
     <ver.jackson>2.15.3</ver.jackson>
     <ver.httpclient>4.5.14</ver.httpclient>
     <ver.httpcore>4.4.16</ver.httpcore>
+    <!-- Normally, these are the same as the above
+         In the case of 4.2.6, there isn't a httpcore-osgi.
+    -->
+    <ver.httpcore-osgi>${ver.httpcore}</ver.httpcore-osgi>
+    <ver.httpclient-osgi>${ver.httpclient}</ver.httpclient-osgi>
 
     <ver.caffeine>3.1.8</ver.caffeine>
     <!-- Most of Jena uses other libraries for equivalent functionality. -->
@@ -282,7 +287,7 @@
 
          <!-- Slow building modules -->
          <module>jena-jdbc</module>
-
+         <module>apache-jena-osgi</module>
        </modules>
      </profile>
 
@@ -1115,6 +1120,13 @@
            <version>3.4.0</version>
          </plugin>
 
+         <plugin>
+           <groupId>org.apache.felix</groupId>
+           <artifactId>maven-bundle-plugin</artifactId>
+           <version>5.1.9</version>
+           <extensions>true</extensions>
+         </plugin>
+ 
          <!--
              Avoid the warnings and errors from m2e.
              This plugin's configuration is used to store Eclipse m2e settings only. 
