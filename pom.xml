@@ -282,7 +282,7 @@
 
          <!-- Slow building modules -->
          <module>jena-jdbc</module>
-
+         <module>jena-osgi</module>
        </modules>
      </profile>
 
