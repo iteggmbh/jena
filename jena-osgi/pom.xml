@@ -298,6 +298,8 @@
               !com.google.errorprone.annotations.*,
               !com.google.appengine.api,
               !com.google.apphosting.api,
+              !org.roaringbitmap,
+              !org.slf4j.bridge,
               com.apicatalog.jsonld.*;resolution:=optional,
               com.apicatalog.rdf.*;resolution:=optional,
               jakarta.json;resolution:=optional,
